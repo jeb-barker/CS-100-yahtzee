@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9770024c-ec86-49e4-aad1-c95119f873c0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS-110-Yahtzee.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CategoryValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DiceRoll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Die.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FiveOfAKind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fives.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourOfAKind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FullHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LgStraight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scorecard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sixes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmStraight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThreeOfAKind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Threes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Twos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/YahtzeeNet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/YahtzeeNetTrainer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OsRi9JDsuQZg6mUlUgHg7keCfM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9770024c-ec86-49e4-aad1-c95119f873c0" name="Changes" comment="" />
+      <created>1682347428605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682347428605</updated>
+      <workItem from="1682347430368" duration="38413000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/YahtzeeNetTrainer.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="dice" language="JAVA" />
+        <watch expression="dice" language="JAVA" />
+        <watch expression="savedDie" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
