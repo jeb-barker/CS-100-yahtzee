@@ -1,5 +1,13 @@
+/**
+ * Category representation of a Large Straight
+ */
 public class LgStraight extends Category
 {
+    /**
+     * Large straight is 5 dice in a row.
+     * @param d Dice object to evaluate the Category with.
+     * @return 40 points if all five dice are sequential.
+     */
     public int evaluate(Dice d)
     {
         if(getUsed())

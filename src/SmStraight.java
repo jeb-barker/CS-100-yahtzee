@@ -1,5 +1,13 @@
+/**
+ * Category representation of a Small Straight.
+ */
 public class SmStraight extends Category
 {
+    /**
+     * A small straight is any four dice in sequential order.
+     * @param d Dice object to evaluate the Category with.
+     * @return 30 points if four dice are in sequential order.
+     */
     public int evaluate(Dice d)
     {
         if(getUsed())

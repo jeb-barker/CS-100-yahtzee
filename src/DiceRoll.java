@@ -1,7 +1,15 @@
+/**
+ * Class to represent a collection of rollable dice.
+ */
 public class DiceRoll extends Dice
 {
+    /** constant number of Die default in the DiceRoll. */
     private static final int NUM_DIE = 5;
 
+    /**
+     * Default constructor for DiceRoll.
+     * Adds NUM_DIE dice to the collection.
+     */
     public DiceRoll()
     {
         super(NUM_DIE);
@@ -11,6 +19,9 @@ public class DiceRoll extends Dice
         }
     }
 
+    /**
+     * Roll every Die in the collection.
+     */
     public void toss()
     {
         for(int i = 0; i < super.getNumDice(); i++)

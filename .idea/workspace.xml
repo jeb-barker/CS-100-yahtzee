@@ -4,37 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9770024c-ec86-49e4-aad1-c95119f873c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS-110-Yahtzee.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CategoryValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Chance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DiceRoll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Die.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FiveOfAKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fives.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FourOfAKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fours.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FullHouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LgStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scorecard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sixes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SmStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreeOfAKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Threes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Twos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YahtzeeNet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YahtzeeNetTrainer.java" afterDir="false" />
+    <list default="true" id="9770024c-ec86-49e4-aad1-c95119f873c0" name="Changes" comment="Yahtzee and YahtzeeNet written">
+      <change afterPath="$PROJECT_DIR$/src/weights.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weightsNew.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weightsgood.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DiceRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiceRoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Die.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Die.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FiveOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FiveOfAKind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FourOfAKind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FullHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FullHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LgStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LgStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scorecard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scorecard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sixes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sixes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThreeOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreeOfAKind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Threes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Threes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Twos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YahtzeeNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/YahtzeeNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YahtzeeNetTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/YahtzeeNetTrainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +63,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jeb/IdeaProjects/CS-110-Yahtzee/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,6 +75,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,12 +87,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682347428605</updated>
-      <workItem from="1682347430368" duration="38413000" />
+      <workItem from="1682347430368" duration="70828000" />
+      <workItem from="1682952015645" duration="3888000" />
+      <workItem from="1683125154356" duration="21163000" />
     </task>
+    <task id="LOCAL-00001" summary="Yahtzee and YahtzeeNet written">
+      <created>1682445680990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682445680990</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Yahtzee and YahtzeeNet written" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yahtzee and YahtzeeNet written" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -101,14 +116,9 @@
           <option name="timeStamp" value="7" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/YahtzeeNetTrainer.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="13" />
+          <line>203</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

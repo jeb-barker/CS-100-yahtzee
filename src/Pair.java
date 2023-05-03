@@ -13,21 +13,14 @@ public class Pair implements Comparable
     {
         return index;
     }
+    public double getValue()
+    {
+        return value;
+    }
 
     @Override
     public int compareTo(Object o) {
         Pair other = (Pair)o;
-        if(value - other.value > 0)
-        {
-            return -1;
-        }
-        else if(value - other.value < 0)
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
+        return -(int)(1000 * (this.value - other.value));
     }
 }

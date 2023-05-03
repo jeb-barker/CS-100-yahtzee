@@ -1,15 +1,25 @@
 import java.util.*;
 
+/**
+ * Class to represent a single Game of Yahtzee.
+ */
 public class Game
 {
+    /** Scorecard for player 1 */
     private Scorecard player1;
+    /** Scorecard for player 2 */
     private Scorecard player2;
+    /** representation of which turn it is. true for player 1, false for player 2. */
     private boolean turn;
-    private boolean singlePlayer;
 
+    /** Representation of the dice to be rerolled. */
     private DiceRoll dice;
+    /** Representation of the dice to be saved. */
     private Dice savedDie;
 
+    /**
+     * Default constructor for a Game.
+     */
     public Game()
     {
         turn = true; //player1 turn.
@@ -17,22 +27,16 @@ public class Game
         player2 = new Scorecard();
         dice = new DiceRoll();
         savedDie = new Dice();
-        singlePlayer = false;
         //gameLoop();
     }
 
-    public Game(YahtzeeNet yn)
-    {
-        turn = true; //player1 turn.
-        player1 = new Scorecard();
-        player2 = new Scorecard();
-        dice = new DiceRoll();
-        savedDie = new Dice();
-        this.singlePlayer = true;
-//        gameLoopSinglePlayer(yn);
-    }
-
-    public int gameLoopSinglePlayer(YahtzeeNet yn, boolean suppress)
+    /**
+     * Method to play a game with an AI yn.
+     * @param yn the YahtzeeNet to play the single game with.
+     * @param suppress whether to print output of the game.
+     * @return Scorecard at the end of the game.
+     */
+    public Scorecard gameLoopSinglePlayer(YahtzeeNet yn, boolean suppress)
     {
         for(int i = 0; i < 13; i++)
         {
@@ -42,11 +46,49 @@ public class Game
             AITurn(yn, suppress);
         }
         if(!suppress)
-            System.out.println(player1);
-        return player1.score();
+            System.out.println(player2);
+        int zeros = 0;
+        for(CategoryValue cv : CategoryValue.values())
+        {
+            if(player2.getCategoryScore(cv) == 0)
+            {
+                zeros++;
+            }
+        }
+        return player2;
     }
 
-    private void gameLoop()
+    /**
+     * Method to play a game Player vs AI.
+     * @param ai the YahtzeeNet to play against.
+     */
+    public void gameLoopVersusAI(YahtzeeNet ai)
+    {
+        for(int i = 0; i < 26; i++)
+        {
+            //re-initialize variables.
+            dice = new DiceRoll();
+            savedDie = new Dice();
+            if(turn)
+            {
+                turn();
+            }
+            else
+            {
+                AITurn(ai, false);
+                System.out.println(player2);
+                turn = !turn;
+            }
+
+        }
+        System.out.println(player1);
+        System.out.println("***********\n" + player2);
+    }
+
+    /**
+     * Basic game Player vs Player.
+     */
+    public void gameLoop()
     {
         for(int i = 0; i < 26; i++)
         {
@@ -55,8 +97,13 @@ public class Game
             savedDie = new Dice();
             turn();
         }
+        System.out.println(player1);
+        System.out.println("***********\n" + player2);
     }
 
+    /**
+     * Basic turn for player vs player.
+     */
     private void turn()
     {
         Scanner input = new Scanner(System.in);
@@ -113,6 +160,11 @@ public class Game
         turn = !turn;
     }
 
+    /**
+     * Basic turn for an AI.
+     * @param yn the YahtzeeNet to play the turn.
+     * @param suppress whether to print output.
+     */
     private void AITurn(YahtzeeNet yn, boolean suppress)
     {
         int rerolls = 3;
@@ -121,9 +173,13 @@ public class Game
             System.out.println("Start of turn:\n");
         while(rerolls > 0)
         {
-            double[] inputs = new double[18];
+            double[] inputs = new double[19];
             //feed forward: get double[18] - five dice, 13 scoring categories
-            Dice fullDice = new Dice();
+            DiceRoll fullDice = new DiceRoll();
+            for (int k = 0; k < 5; k++)
+            {
+                fullDice.removeDie(0);
+            }
             for (int i = 0; i < savedDie.getNumDice(); i++) {
                 fullDice.addDie(savedDie.getDie(i));
             }
@@ -131,34 +187,45 @@ public class Game
                 fullDice.addDie(dice.getDie(i));
             }
 
-            for(int i = 0; i < fullDice.getNumDice(); i++)
+            for(int i = 0; i < 6; i++)
             {
                 //add dice value-1 / 5.
                 //inputs[i] = (fullDice.getDie(i).getValue()-1)/5.0;
-                inputs[i] = (fullDice.count(i))/5.0;
+                inputs[i] = (fullDice.count(i+1))/5.0;
             }
-            for(int i = 5; i < 18; i++)
+            for(int i = 6; i < 19; i++)
             {
-                inputs[i] = Math.tanh(player1.getEvaluation(CategoryValue.values()[i-5], fullDice));
+                inputs[i] = Math.tanh(player2.getEvaluation(CategoryValue.values()[i-6], fullDice));
             }
             yn.feedForward(inputs);
             ArrayList<Integer> holds = yn.getHolds();
-            holds.sort(Integer::compareTo);
-            Collections.reverse(holds);
+            //holds is the number of each type of die to try to hold.
             ArrayList<Pair> scoreCategory = yn.getScoreCategory();
-            double rerollVal = yn.getReroll();
+            scoreCategory.sort(Pair::compareTo);
+
             if(!suppress)
-                System.out.println("Dice: \n" + dice);
+                System.out.println("Dice: \n" + fullDice);
             if(!suppress)
                 System.out.println("Hold: \n" + holds);
             if(holds.size() > 0)
             {
+                savedDie = new Dice();
                 for(int i = 0; i < holds.size(); i++)
                 {
                     try
                     {
-                        savedDie.addDie(dice.getDie(holds.get(i)));
-                        dice.removeDie(holds.get(i));
+                        int addedTotal = 0;
+                        for(int j = 0; j < fullDice.getNumDice(); j++)
+                        {
+                            //for each die in dice, check type and attempt to add it.
+                            if(addedTotal < holds.get(i) && i+1 == fullDice.getDie(j).getValue())
+                            {
+                                savedDie.addDie(fullDice.getDie(j));
+                                fullDice.removeDie(j);
+                                j--;
+                                addedTotal++;
+                            }
+                        }
                     }
                     catch(IndexOutOfBoundsException e)
                     {
@@ -166,6 +233,7 @@ public class Game
                         i++;
                     }
                 }
+                dice = fullDice;
             }
             if(!suppress)
                 System.out.println("HeldDice: \n" + savedDie);
@@ -174,7 +242,7 @@ public class Game
             {
                 boolean continueLoop = true;
                 for (Pair p : scoreCategory) {
-                    if (!player1.checkScored(CategoryValue.values()[p.getIndex()]) && continueLoop)
+                    if (!player2.checkScored(CategoryValue.values()[p.getIndex()]) && continueLoop)
                     {
                         rerolls = 0;
                         Dice df = new Dice();
@@ -189,22 +257,26 @@ public class Game
                         if(!suppress)
                             System.out.println("Chose: " + CategoryValue.values()[p.getIndex()].toString());
                         if(!suppress)
-                            System.out.println("Value: " + player1.getEvaluation(CategoryValue.values()[p.getIndex()],df));
-                        player1.choose(CategoryValue.values()[p.getIndex()], df);
+                            System.out.println("Value: " + player2.getEvaluation(CategoryValue.values()[p.getIndex()],df));
+                        player2.choose(CategoryValue.values()[p.getIndex()], df);
                         continueLoop = false;
                     }
                 }
                 rerolls--;
             }
-            else if(rerollVal > -1)
+            else
             {
-
                 dice.toss();
                 rerolls--;
             }
         }
     }
 
+    /**
+     * Helper method to get the user's input.
+     * @param input Scanner to use for input.
+     * @return validated input from the user.
+     */
     private String getUserAction(Scanner input)
     {
         //print the dice to reroll.
@@ -254,6 +326,10 @@ public class Game
         }
     }
 
+    /**
+     * Score a player's scorecard based on their input.
+     * @param combined whether the dice have been combined already or not.
+     */
     private void score(boolean combined)
     {
         Dice fullDice;
@@ -282,7 +358,12 @@ public class Game
                     System.out.printf("\n%d: %s, %d points", cv.getValue() + 1, cv.toString(), player1.getEvaluation(cv, fullDice));
                 }
             }
+
             int choice = getScoreChoice();
+            while(choice < 1 || choice > 13)
+            {
+                choice = getScoreChoice();
+            }
             for (CategoryValue cv : CategoryValue.values())
             {
                 if(choice == cv.getValue() + 1)
@@ -302,7 +383,11 @@ public class Game
                     System.out.printf("\n%d: %s, %d points", cv.getValue() + 1, cv.toString(), player2.getEvaluation(cv, fullDice));
                 }
             }
-            int choice = getScoreChoice();
+            int choice = -1;
+            while(choice < 1 || choice > 13)
+            {
+                choice = getScoreChoice();
+            }
             for (CategoryValue cv : CategoryValue.values())
             {
                 if(choice == cv.getValue() + 1)
@@ -315,6 +400,10 @@ public class Game
         }
     }
 
+    /**
+     * Gets the user's valid score choice.
+     * @return valid integer scoring choice.
+     */
     private int getScoreChoice()
     {
         System.out.println("");
