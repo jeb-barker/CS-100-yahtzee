@@ -14,9 +14,9 @@ public class YahtzeeNetTrainer
     private ArrayList<Integer> scores;
 
     /** How many games each YahtzeeNet should play per generation. */
-    private static final int BATCH_SIZE = 2;
+    private static final int BATCH_SIZE = 5;
     /** How many YahtzeeNets should be created each generation. */
-    private static final int POP_SIZE = 100;
+    private static final int POP_SIZE = 50;
     /** number of generations to train for. */
     private static final int GENERATION_NUM = 100;
 

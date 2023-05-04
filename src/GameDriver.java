@@ -8,16 +8,9 @@ import java.util.Scanner;
 public class GameDriver
 {
     /** Path to weights for AI. */
-    private static final String weightPath = "/Users/jeb/IdeaProjects/CS-110-Yahtzee/src/weights.txt";
-    public static void main(String[] args) throws FileNotFoundException
-    {
+    private static final String weightPath = "weightsgood.txt";
+    public static void main(String[] args) {
         startUserGameChoice();
-//        YahtzeeNetTrainer ynt = new YahtzeeNetTrainer(weightPath);
-//        YahtzeeNet ai = ynt.train();
-//        ai.printWeights(weightPath);
-
-//        YahtzeeNet ai = yn.read();
-//        g.gameLoopVersusAI(ai);
     }
 
     /**
